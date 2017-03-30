@@ -1,4 +1,4 @@
 "use strict";
-var Util = (function(){
+const Util = (function(){
 
 })();

@@ -81,6 +81,9 @@ button.toggled:hover,
 .link-button.toggled:hover {
 	background: var(--complimentary-color-dark);
 }
+.hidden {
+	display: none;
+}
 .row{
 	display: flex;
 	flex-flow: row nowrap;
@@ -94,13 +97,11 @@ button.toggled:hover,
 	align-items: center;
 }
 .stack-stretch{
-	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: stretch;
 }
 .error {
-	display: none;
 	color: var(--error-color);
 	background: var(--error-background);
 	border: 1px solid var(--error-color);
@@ -108,7 +109,6 @@ button.toggled:hover,
 	margin-bottom: 10px;
 }
 .success {
-	display: none;
 	color: var(--success-color);
 	background: var(--success-background);
 	border: 1px solid var(--success-color);
@@ -116,7 +116,6 @@ button.toggled:hover,
 	margin-bottom: 10px;
 }
 .warn {
-	display: none;
 	color: var(--warn-color);
 	background: var(--warn-background);
 	border: 1px solid var(--warn-color);
@@ -124,7 +123,6 @@ button.toggled:hover,
 	margin-bottom: 10px;
 }
 .info {
-	display: none;
 	color: var(--info-color);
 	background: var(--info-background);
 	border: 1px solid var(--info-color);

@@ -1,9 +1,9 @@
 "use strict";
 
-var AppView = (function(){
+const AppView = (function(){
 
 	function create(){
-		var appView = {};
+		let appView = {};
 		bind(appView);
 		appView.init();
 		return appView;

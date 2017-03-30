@@ -1,12 +1,12 @@
-var AppService = (function(){
+const AppService = (function(){
 
-	var defaults = {
+	const defaults = {
 		cacheName : "app-shell",
 		precacheUrls : ["/index.html"]
 	};
 
 	function create(options){
-		var appService = {};
+		let appService = {};
 		appService.options = Object.assign({}, defaults, options);
 		bind(appService);
 		appService.init();
@@ -70,7 +70,7 @@ var AppService = (function(){
 	}
 
 	return {
-		create : create
+		create
 	};
 
 })();
