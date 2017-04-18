@@ -5,14 +5,16 @@
 	--complimentary-color-dark: darkblue;
 	--warn-color: #cccc00;
 	--warn-background: #FDFFB5;
-	--error-color: #cc0000;
-	--error-background:  #ffebeb;
+	--negative-color: #cc0000;
+	--negative-background:  #ffebeb;
 	--info-color: #0000cc;
 	--info-background: #d9dbff;
-	--success-color: #00cc00;
-	--success-background: #e2ffd9;
+	--positive-color: #00cc00;
+	--positive-background: #e2ffd9;
 }
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	position: relative;
 }
@@ -73,10 +75,39 @@ button:focus,
 .link-button:focus {
 	outline: none;
 }
-button.toggled,
-.link-button.toggled{
+button.toggle,
+.link-button.toggle{
+	position: relative;
+	border-radius: 15px;
+	width: 60px;
+	height: 30px;
+	border: 1px solid #ccc;
+	padding: 0px;
 	background: var(--complimentary-color);
+	transition: 0.25s;
 }
+button.toggle::after,
+.link-button.toggle::after{
+	content: "";
+	display: block;
+	border-radius: 15px;
+	width: 30px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+button.toggle.on,
+.link-button.toggle.on {
+	border: 1px solid #ccc;
+	background-color: red
+}
+button.toggle.on::after{
+	transform: translateX(30px);
+}
+
 button.toggled:hover,
 .link-button.toggled:hover {
 	background: var(--complimentary-color-dark);
@@ -109,7 +140,7 @@ button.toggled:hover,
 	margin-bottom: 10px;
 }
 .success {
-	color: var(--success-color);
+	color: var(--positivr-color);
 	background: var(--success-background);
 	border: 1px solid var(--success-color);
 	padding: 5px;
