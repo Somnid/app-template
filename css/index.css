@@ -133,14 +133,14 @@ button.toggled:hover,
 	align-items: stretch;
 }
 .error {
-	color: var(--error-color);
-	background: var(--error-background);
-	border: 1px solid var(--error-color);
+	color: var(--negative-color);
+	background: var(--negative-background);
+	border: 1px solid var(--negative-color);
 	padding: 5px;
 	margin-bottom: 10px;
 }
 .success {
-	color: var(--positivr-color);
+	color: var(--positive-color);
 	background: var(--success-background);
 	border: 1px solid var(--success-color);
 	padding: 5px;
